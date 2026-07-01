@@ -1,0 +1,24 @@
+#include <iostream>
+#include <map>
+#include <string>
+using namespace std;
+
+int main() {
+    string str;
+
+    cout << "Enter a string: ";
+    getline(cin, str);
+
+    map<char, int> freq;
+
+    for (char ch : str) {
+        freq[ch]++;
+    }
+
+    cout << "\nCharacter frequencies:\n";
+    for (auto x : freq) {
+        cout << "'" << x.first << "' : " << x.second << endl;
+    }
+
+    return 0;
+}
